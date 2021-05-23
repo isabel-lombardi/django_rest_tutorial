@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from account.views import SignupAPIView, LogoutAPIView
+from rest_framework.authtoken.views import obtain_auth_token
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("signup/", SignupAPIView.as_view(), name="signup"),
+
+    # After a request containing {"username": "password": } a token associated with the user is returned
+    # IT DOES NOT REGENERATE IT
+    path("login/", obtain_auth_token, name="login"),
+    path("logout/", LogoutAPIView.as_view(), name="logout"),
 ]
