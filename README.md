@@ -99,4 +99,43 @@ Raw passwords are not stored, Django provides a flexible password storage system
 Create API view
 
 We handle incoming json requests and validate it to confirm that all required fields are correct
+In this case, we respond to the request with the POST method.  
+Validate the data that will be sent to the JSON  
+If everything is correct, we save them in the DB  
+And we communicate the outcome of the process through the response.
+</p>
+
+
+<h3>* HTTP Methods </h3>
+<p>
+
+The Hypertext Transfer Protocol (HTTP) is designed to enable communications between clients and servers, works as a <b>request-response protocol</b> between a client and server.
+
+<ul>
+    <li><b>GET,</b> used to request data from a specified resource.</li>
+    <li><b>POST,</b> when the user has to send data or files to the server.</li>
+    <li><b>PUT,</b> used to send data to a server to update a resource.</li>
+    <li><b>DELETE,</b> deletes the specified resource</li>
+</ul>
+
+
+<h3>* HTTP Status Codes </h3>
+<p>
+HTTP response status codes indicate whether a specific HTTP request has been successfully completed.
+
+
+<a href="https://www.restapitutorial.com/httpstatuscodes.html">Link </a> where all status code are described
+</p>
+
+<h3>Urls.py</h3>
+<p>
+A URL is a web address. 
+
+Every page needs its URL, so that the application knows what to show a user visiting a URL. 
+Each URL will be associated with a method created in the views.py</p>
+
+<h3>Settings.py</h3>
+<p>
+Is a core file in Django projects. <br>  
+You can configure things like Django applications, databases, templates and middleware, among other things.
 </p>
