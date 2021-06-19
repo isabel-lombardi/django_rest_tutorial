@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from account.views import SignupAPIView, LogoutAPIView
+from upload.views import UploadAPIView
+
 from rest_framework.authtoken.views import obtain_auth_token
 
 
@@ -27,4 +29,7 @@ urlpatterns = [
     # IT DOES NOT REGENERATE IT
     path("login/", obtain_auth_token, name="login"),
     path("logout/", LogoutAPIView.as_view(), name="logout"),
+
+    path("upload/", UploadAPIView.as_view(), name="upload"),
+
 ]
