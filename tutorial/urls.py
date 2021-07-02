@@ -18,6 +18,8 @@ from django.urls import path
 from account.views import SignupAPIView, LogoutAPIView
 from upload.views import UploadAPIView
 
+from game.views import UserPlanetArmyAPIView
+
 from rest_framework.authtoken.views import obtain_auth_token
 
 
@@ -31,5 +33,7 @@ urlpatterns = [
     path("logout/", LogoutAPIView.as_view(), name="logout"),
 
     path("upload/", UploadAPIView.as_view(), name="upload"),
+
+    path("game/planet-army-names/", UserPlanetArmyAPIView.as_view(), name='planet-army-name')
 
 ]

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "upload",
     "rest_framework",  #
     "rest_framework.authtoken",  #
+    'game',
 ]
 
 MIDDLEWARE = [
